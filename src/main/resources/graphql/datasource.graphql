@@ -1,0 +1,30 @@
+
+#查询方法, 继承 root 定义的 Query
+extend type Query{
+    #根据dbConnectUuid查询数据库连接详情
+    detailDbConnectionByUuid(dbConnectUuid: String!): DbConnectionDetail
+    listPageDbConnections(dbName: String, dbState: String, page: Int, size: Int): DbConnectionPage
+}
+
+#数据库连接实体
+type DbConnectionDetail{
+    dbConnectUuid: String!
+    dbInstance: String!
+    dbName: String!
+    dbType: String!
+    dbTypeStr: String!
+    dbIp: String!
+    dbPort: String!
+    account: String!
+    password: String!
+    dbState: String!
+    dbStateStr: String!
+    createUser: String!
+    createTime: String!
+    updateTime: String
+}
+
+type DbConnectionPage {
+    records: [DbConnectionDetail]
+    total: Int
+}

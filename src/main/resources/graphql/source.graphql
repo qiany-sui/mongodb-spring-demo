@@ -1,0 +1,31 @@
+
+#查询方法, 继承 root 定义的 Query
+extend type Query{
+    listSources: [SourceInfo]
+}
+
+#数据库连接实体
+type SourceInfo {
+    sourceUuid: String
+    sourceName: String
+    sourceType: String
+    sourceCode: String
+    subType: String
+    apiId: String
+    version: String
+    sourcePath: String
+    account: String
+    password: String
+    driver: String
+    isTraversal: Int
+    remark: String
+    createUser: String
+    updateUser: String
+    createTime: String
+    datachangeLasttime: String
+    schemaName: String
+    nameSpace: String
+    inputParam: String
+    outputParam: String
+    relationUuid: String
+}
