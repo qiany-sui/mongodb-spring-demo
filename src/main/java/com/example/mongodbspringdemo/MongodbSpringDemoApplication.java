@@ -3,7 +3,6 @@ package com.example.mongodbspringdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 //@EnableMongoRepositories(basePackageClasses = { PersonJpaDao.class }) // springdata的使用
